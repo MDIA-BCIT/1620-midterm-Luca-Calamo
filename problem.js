@@ -13,3 +13,77 @@ CHALLENGE
 - If the password is less than 5 characters, log out "Your password is too short!".
 */
 
+let password = "okiedokie";
+
+
+function passCheck(input, correctPassword) {
+    if (input === correctPassword) {
+        console.log("Access Granted")
+    } else if (input === "forgot") {
+        console.log("Here is a hint")
+    } else if (input === "reset") {
+        console.log("Let's reset your account")
+    } else if (input.length < 5) {
+        console.log("Your password is too short!")
+    } else {
+        console.log("Access denied")
+    }
+}
+
+
+
+
+passCheck("okiedokie", password);
+//Password matches//
+
+passCheck("forgot");
+//forgot password//
+
+passCheck("reset");
+//reset password//
+
+passCheck("hooray");
+//wrong password//
+
+passCheck("dope");
+//password too short//
+
+/*for Challenge 1 I think you have to set forgot and reset as paramaters instead of strings like I was doing. 
+I couldnt come up with a solution to keep them as strings to and have them print 2 diffrent outputs.
+
+
+//not sure which way is proper so did both just in case//
+
+
+/*
+function passCheck (input, correctPassword, passwordLength) {
+    if (input === correctPassword) {
+        return "Access Granted"
+    } else if  (input === "forgot") {
+        return "Here is a hint"
+    } else if  (input === "reset") {
+        return "Let's reset your account"
+    } else if (input.length  < 5) {
+        return "Your password is too short!"
+    } else {
+        return "Access denied"
+    }
+} */
+
+
+
+/*console.log(passCheck("okiedokie", password));
+//Password matches//
+
+console.log(passCheck("forgot"));
+//forgot password//
+
+console.log(passCheck("reset"));
+//reset password//
+
+console.log(passCheck("hooray"));
+//wrong password//
+
+console.log(passCheck("dope"));
+//password too short//
+*/
